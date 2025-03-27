@@ -1,0 +1,66 @@
+vim.g.mapleader = ' '
+vim.g.maplocalleader = ' '
+
+vim.g.have_nerd_font = true
+
+vim.opt.number = true
+vim.opt.relativenumber = true
+
+vim.opt.mouse = 'a'
+
+vim.opt.showmode = false
+
+vim.schedule(function()
+  vim.opt.clipboard = 'unnamedplus'
+end)
+
+vim.opt.tabstop = 2
+vim.opt.shiftwidth = 2
+vim.opt.shiftround = true
+vim.opt.expandtab = true
+
+vim.opt.breakindent = true
+
+vim.opt.undofile = true
+
+vim.opt.ignorecase = true
+vim.opt.smartcase = true
+
+vim.opt.signcolumn = 'yes'
+
+vim.opt.updatetime = 250
+
+vim.opt.timeoutlen = 300
+
+vim.opt.splitright = true
+vim.opt.splitbelow = true
+
+vim.opt.list = true
+vim.opt.listchars = { tab = '» ', trail = '·', nbsp = '␣' }
+
+vim.opt.inccommand = 'split'
+
+vim.opt.cursorline = true
+
+-- TODO - mozna zmenit
+vim.opt.scrolloff = 5
+
+vim.opt.confirm = true
+
+vim.opt.laststatus = 3
+
+-- TODO: Folding
+vim.opt.smoothscroll = true
+vim.opt.foldmethod = 'expr'
+vim.opt.foldexpr = "v:lua.require'utils.ui'.foldexpr()"
+vim.opt.foldlevel = 99
+vim.opt.foldtext = ''
+vim.opt.fillchars = {
+  foldopen = '',
+  foldclose = '',
+  fold = ' ',
+  foldsep = ' ',
+  -- diff = '╱',
+  -- eob = ' ',
+}
+
