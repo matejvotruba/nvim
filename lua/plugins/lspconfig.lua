@@ -18,7 +18,11 @@ return {
     dependencies = {
 
       -- https://github.com/williamboman/mason.nvim
-      { 'williamboman/mason.nvim', opts = {} },
+      {
+        'williamboman/mason.nvim',
+        ---@type MasonSettings
+        opts = {},
+      },
       'williamboman/mason-lspconfig.nvim',
       'WhoIsSethDaniel/mason-tool-installer.nvim',
 
@@ -159,17 +163,15 @@ return {
       --  - capabilities (table): Override fields in capabilities. Can be used to disable certain LSP features.
       --  - settings (table): Override the default settings passed when initializing the server.
       --        For example, to see the options for `lua_ls`, you could go to: https://luals.github.io/wiki/settings/
+      ---@type table<string, vim.lsp.Config>
       local servers = {
+        astro = {},
         html = {},
-        emmet_language_server = {},
         cssls = {},
         ts_ls = {},
-        astro = {},
+        emmet_language_server = {},
         tailwindcss = {},
         lua_ls = {
-          -- cmd = { ... },
-          -- filetypes = { ... },
-          -- capabilities = {},
           settings = {
             Lua = {
               completion = {
@@ -187,6 +189,7 @@ return {
       vim.list_extend(ensure_installed, {
         'stylua', -- Format Lua
         'prettierd', -- Format
+        'oxfmt', -- Format
       })
       require('mason-tool-installer').setup { ensure_installed = ensure_installed }
       require('mason-lspconfig').setup {

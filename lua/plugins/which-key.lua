@@ -2,6 +2,7 @@
 return {
   'folke/which-key.nvim',
   event = 'VimEnter',
+  ---@type wk.Opts
   opts = {
     delay = 300,
     expand = 1,

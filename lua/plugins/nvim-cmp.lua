@@ -60,7 +60,7 @@ return {
 
         -- Select the [n]ext item
         ['<C-n>'] = cmp.mapping.select_next_item(),
-        ['<Tab>'] = cmp.mapping.select_next_item(),
+        -- ['<Tab>'] = cmp.mapping.select_next_item(),
         -- Select the [p]revious item
         ['<C-p>'] = cmp.mapping.select_prev_item(),
 
@@ -76,7 +76,7 @@ return {
           select = true,
           behavior = cmp.ConfirmBehavior.Insert,
         },
-        ['<CR>'] = cmp.mapping.confirm {
+        ['<Tab>'] = cmp.mapping.confirm {
           select = true,
           behavior = cmp.ConfirmBehavior.Insert,
         },
