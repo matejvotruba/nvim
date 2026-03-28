@@ -1,10 +1,13 @@
 -- https://github.com/folke/which-key.nvim
+---@module 'lazy'
+---@type LazySpec
 return {
   'folke/which-key.nvim',
   event = 'VimEnter',
+  ---@module 'which-key'
   ---@type wk.Opts
   opts = {
-    delay = 300,
+    delay = 100,
     expand = 1,
     icons = {
       -- Enable mappings if nerd font
@@ -44,17 +47,13 @@ return {
     -- Document existing key chains
     spec = {
       { '<leader>c', group = '[C]ode', mode = { 'n', 'x' } },
-      { '<leader>d', group = '[D]ocument' },
-      { '<leader>r', group = '[R]ename' },
+      { '<leader>b', group = '[B]uffer' },
       { '<leader>s', group = '[S]earch' },
       { '<leader>w', group = '[W]orkspace' },
-      { '<leader>t', group = '[T]oggle' },
-      { '<leader>h', group = 'Git [H]unk', mode = { 'n', 'v' } },
-      { '[', group = 'prev' },
-      { ']', group = 'next' },
-      { 'g', group = 'goto' },
-      { 'gs', group = 'surround' },
-      { 'z', group = 'fold' },
+      { '[', group = 'Prev' },
+      { ']', group = 'Next' },
+      { 'g', group = 'Goto' },
+      { 's', group = 'Surround' },
     },
   },
 }

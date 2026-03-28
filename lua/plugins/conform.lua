@@ -1,4 +1,6 @@
 -- https://github.com/stevearc/conform.nvim
+---@module 'lazy'
+---@type LazySpec
 return {
   'stevearc/conform.nvim',
   event = { 'BufWritePre' },
@@ -13,6 +15,7 @@ return {
       desc = '[F]ormat buffer',
     },
   },
+  ---@module 'conform'
   ---@type conform.setupOpts
   opts = {
     notify_no_formatters = true,

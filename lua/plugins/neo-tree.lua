@@ -1,4 +1,6 @@
 -- https://github.com/nvim-neo-tree/neo-tree.nvim
+---@module 'lazy'
+---@type LazySpec
 return {
   'nvim-neo-tree/neo-tree.nvim',
   version = '*',
@@ -12,6 +14,8 @@ return {
     { '\\', ':Neotree reveal<CR>', desc = 'NeoTree reveal', silent = true },
     -- { '<leader>e', ':Neotree reveal<CR>', desc = 'NeoTree', silent = true },
   },
+  ---@module 'neo-tree'
+  ---@type neotree.Config
   opts = {
     filesystem = {
       filtered_items = {

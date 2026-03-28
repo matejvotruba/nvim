@@ -1,4 +1,6 @@
 -- https://github.com/nvim-treesitter/nvim-treesitter
+---@module 'lazy'
+---@type LazySpec
 return {
   'nvim-treesitter/nvim-treesitter',
   build = ':TSUpdate',
@@ -9,6 +11,10 @@ return {
       'bash',
       'diff',
       'html',
+      'css',
+      'javascript',
+      'typescript',
+      'astro',
       'lua',
       'luadoc',
       'markdown',

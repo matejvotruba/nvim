@@ -1,4 +1,6 @@
 -- https://github.com/hrsh7th/nvim-cmp
+---@module 'lazy'
+---@type LazySpec
 return {
   'hrsh7th/nvim-cmp',
   event = 'InsertEnter',
