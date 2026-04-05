@@ -45,10 +45,7 @@ vim.opt.confirm = true
 
 vim.opt.laststatus = 3
 
--- TODO: Folding
 vim.opt.smoothscroll = true
-vim.opt.foldmethod = 'expr'
-vim.opt.foldexpr = "v:lua.require'utils.ui'.foldexpr()"
 vim.opt.foldlevel = 99
 vim.opt.foldtext = ''
 vim.opt.fillchars = {
