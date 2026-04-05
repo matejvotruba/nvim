@@ -3,7 +3,7 @@
 ---@type LazySpec
 return {
   'folke/which-key.nvim',
-  event = 'VimEnter',
+  event = 'VeryLazy',
   ---@module 'which-key'
   ---@type wk.Opts
   opts = {

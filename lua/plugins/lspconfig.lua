@@ -1,40 +1,24 @@
 ---@module 'lazy'
 ---@type LazySpec
 return {
-  -- https://github.com/folke/lazydev.nvim
-  {
-    'folke/lazydev.nvim',
-    ft = 'lua',
-    opts = {
-      library = {
-        -- Load luvit types when the `vim.uv` word is found
-        { path = '${3rd}/luv/library', words = { 'vim%.uv' } },
-      },
-    },
-  },
-
   -- https://github.com/neovim/nvim-lspconfig
   {
     'neovim/nvim-lspconfig',
     dependencies = {
 
-      -- https://github.com/williamboman/mason.nvim
+      -- https://github.com/mason-org/mason.nvim
       {
-        'williamboman/mason.nvim',
+        'mason-org/mason.nvim',
         ---@module 'mason.settings'
         ---@type MasonSettings
         opts = {},
       },
-      'williamboman/mason-lspconfig.nvim',
+      'mason-org/mason-lspconfig.nvim',
       'WhoIsSethDaniel/mason-tool-installer.nvim',
 
       -- Notifications for LSP.
       -- https://github.com/j-hui/fidget.nvim
       'j-hui/fidget.nvim',
-
-      -- Allows extra capabilities provided by nvim-cmp
-      -- https://github.com/hrsh7th/cmp-nvim-lsp
-      'hrsh7th/cmp-nvim-lsp',
     },
     config = function()
       --  This function gets run when an LSP attaches to a particular buffer.
@@ -88,22 +72,7 @@ return {
         end,
       })
 
-      -- LSP servers and clients are able to communicate to each other what features they support.
-      --  By default, Neovim doesn't support everything that is in the LSP specification.
-      --  When you add nvim-cmp, luasnip, etc. Neovim now has *more* capabilities.
-      --  So, we create new capabilities with nvim cmp, and then broadcast that to the servers.
-      local capabilities = vim.lsp.protocol.make_client_capabilities()
-      capabilities = vim.tbl_deep_extend('force', capabilities, require('cmp_nvim_lsp').default_capabilities())
-
       -- Enable the following language servers
-      --  Feel free to add/remove any LSPs that you want here. They will automatically be installed.
-      --
-      --  Add any additional override configuration in the following tables. Available keys are:
-      --  - cmd (table): Override the default command used to start the server
-      --  - filetypes (table): Override the default list of associated filetypes for the server
-      --  - capabilities (table): Override fields in capabilities. Can be used to disable certain LSP features.
-      --  - settings (table): Override the default settings passed when initializing the server.
-      --        For example, to see the options for `lua_ls`, you could go to: https://luals.github.io/wiki/settings/
       ---@type table<string, vim.lsp.Config>
       local servers = {
         astro = {},
