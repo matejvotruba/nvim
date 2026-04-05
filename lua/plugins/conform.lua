@@ -34,7 +34,7 @@ return {
     -- end,
     formatters_by_ft = {
       lua = { 'stylua' },
-      astro = { 'prettier', stop_after_first = true },
+      astro = { 'prettierd', 'prettier', stop_after_first = true },
       html = { 'oxfmt', 'prettierd', 'prettier', stop_after_first = true },
       css = { 'oxfmt', 'prettierd', 'prettier', stop_after_first = true },
       javascript = { 'oxfmt', 'prettierd', 'prettier', stop_after_first = true },
