@@ -7,7 +7,7 @@ return {
   ---@module 'which-key'
   ---@type wk.Opts
   opts = {
-    delay = 100,
+    delay = 200,
     expand = 1,
     icons = {
       -- Enable mappings if nerd font
