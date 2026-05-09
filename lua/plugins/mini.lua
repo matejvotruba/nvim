@@ -23,9 +23,19 @@ return {
     -- Simple and easy statusline.
     local statusline = require 'mini.statusline'
     statusline.setup { use_icons = vim.g.have_nerd_font }
-    ---@diagnostic disable-next-line: duplicate-set-field
-    statusline.section_location = function() return '%2l:%-2v (%p%%)' end
 
+    ---@diagnostic disable-next-line: duplicate-set-field
+    statusline.section_location = function(args)
+      if statusline.is_truncated(args.trunc_width) then return '%l│%2v' end
+      -- Use `virtcol()` to correctly h😂andle multi-byte characters
+      return '%2l:%-2v (%p%%)'
+    end
+
+    ---@diagnostic disable-next-line: duplicate-set-field
+    statusline.section_filename = function()
+      if vim.bo.buftype == 'terminal' then return '%t' end -- In terminal always use plain name
+      return '%f%m%r'
+    end
     require('mini.pairs').setup()
   end,
 }
