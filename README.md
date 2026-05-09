@@ -5,6 +5,7 @@
 - [ ] Add autotag: https://github.com/windwp/nvim-ts-autotag
 - [ ] Improve UI based on https://www.lazyvim.org/plugins/ui
     - [ ] Improve Mini.Statusline
+    - [ ] Add noice https://github.com/folke/noice.nvim
 - [ ] More inspiration from https://www.lazyvim.org/plugins
 - [ ] Add git stuff from gitsigns probably
     - [ ] maybe from here: https://github.com/nvim-lua/kickstart.nvim/blob/master/lua/kickstart/plugins/gitsigns.lua
