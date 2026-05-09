@@ -20,6 +20,9 @@ return {
     filesystem = {
       filtered_items = {
         visible = true,
+        never_show = {
+          '.git'
+        }
       },
       window = {
         mappings = {
@@ -44,5 +47,16 @@ return {
         },
       },
     },
+
+    -- event_handlers = function(_, event_handlers)
+    --   local function on_move(data)
+    --     Snacks.rename.on_rename_file(data.source, data.destination)
+    --   end
+    --   local events = require 'neo-tree.events'
+    --   vim.list_extend(event_handlers, {
+    --     { event = events.FILE_MOVED, handler = on_move },
+    --     { event = events.FILE_RENAMED, handler = on_move },
+    --   })
+    -- end,
   },
 }
