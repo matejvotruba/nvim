@@ -30,14 +30,6 @@ return {
             vim.keymap.set(mode, keys, func, { buf = event.buf, desc = 'LSP: ' .. desc })
           end
 
-          -- Remove default LSP keybindings
-          vim.keymap.del('n', 'gra')
-          vim.keymap.del('n', 'gri')
-          vim.keymap.del('n', 'grn')
-          vim.keymap.del('n', 'grr')
-          vim.keymap.del('n', 'grt')
-          vim.keymap.del('n', 'grx')
-
           -- [G]oto
           map('gd', require('telescope.builtin').lsp_definitions, '[G]oto [D]efinition')
           map('gr', require('telescope.builtin').lsp_references, '[G]oto [R]eferences')
