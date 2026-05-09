@@ -74,7 +74,13 @@ return {
       -- Enable the following language servers
       ---@type table<string, vim.lsp.Config>
       local servers = {
-        astro = {},
+        astro = {
+          init_options = {
+            typescript = {
+              tsdk = vim.fn.stdpath 'data' .. '/mason/packages/astro-language-server/node_modules/typescript/lib',
+            },
+          },
+        },
         html = {},
         cssls = {},
         ts_ls = {},
@@ -104,7 +110,9 @@ return {
             })
           end,
           settings = {
-            Lua = {},
+            Lua = {
+              format = { enable = false }, -- Disable formatting (formatting is done by stylua)
+            },
           },
         },
         jsonls = {
