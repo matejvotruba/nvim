@@ -9,3 +9,7 @@
 - [ ] More inspiration from https://www.lazyvim.org/plugins
 - [ ] Add git stuff from gitsigns probably
     - [ ] maybe from here: https://github.com/nvim-lua/kickstart.nvim/blob/master/lua/kickstart/plugins/gitsigns.lua
+- [ ] Add markdown rendering
+    - [ ] https://github.com/OXY2DEV/markview.nvim
+    - [ ] https://github.com/MeanderingProgrammer/render-markdown.nvim
+
