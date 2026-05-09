@@ -27,15 +27,22 @@ return {
         callback = function(event)
           local map = function(keys, func, desc, mode)
             mode = mode or 'n'
-            vim.keymap.set(mode, keys, func, { buffer = event.buf, desc = 'LSP: ' .. desc })
+            vim.keymap.set(mode, keys, func, { buf = event.buf, desc = 'LSP: ' .. desc })
           end
+
+          -- Remove default LSP keybindings
+          vim.keymap.del('n', 'gra')
+          vim.keymap.del('n', 'gri')
+          vim.keymap.del('n', 'grn')
+          vim.keymap.del('n', 'grr')
+          vim.keymap.del('n', 'grt')
+          vim.keymap.del('n', 'grx')
 
           -- [G]oto
           map('gd', require('telescope.builtin').lsp_definitions, '[G]oto [D]efinition')
           map('gr', require('telescope.builtin').lsp_references, '[G]oto [R]eferences')
-          map('gD', vim.lsp.buf.declaration, '[G]oto [D]eclaration')
-          map('gI', require('telescope.builtin').lsp_implementations, '[G]oto [I]mplementation')
-          map('gT', require('telescope.builtin').lsp_type_definitions, '[G]oto [T]ype definition')
+          map('gi', require('telescope.builtin').lsp_implementations, '[G]oto [I]mplementation')
+          map('gt', require('telescope.builtin').lsp_type_definitions, '[G]oto [T]ype definition')
 
           -- [C]ode
           map('<leader>cs', require('telescope.builtin').lsp_document_symbols, '[C]ode [S]ymbols')
