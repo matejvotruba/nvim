@@ -34,7 +34,7 @@ return {
           map('gd', require('telescope.builtin').lsp_definitions, '[G]oto [D]efinition')
           map('gr', require('telescope.builtin').lsp_references, '[G]oto [R]eferences')
           map('gi', require('telescope.builtin').lsp_implementations, '[G]oto [I]mplementation')
-          map('gt', require('telescope.builtin').lsp_type_definitions, '[G]oto [T]ype definition')
+          map('gT', require('telescope.builtin').lsp_type_definitions, '[G]oto [T]ype definition')
 
           -- [C]ode
           map('<leader>cs', require('telescope.builtin').lsp_document_symbols, '[C]ode [S]ymbols')
