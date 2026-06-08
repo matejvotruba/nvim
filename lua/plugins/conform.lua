@@ -32,17 +32,30 @@ return {
     --     }
     --   end
     -- end,
+    -- TODO: Add oxfmt once it is stable enough (supporting important plugins)
+    -- formatters_by_ft = {
+    --   lua = { 'stylua' },
+    --   astro = { 'prettierd', 'prettier', stop_after_first = true },
+    --   html = { 'oxfmt', 'prettierd', 'prettier', stop_after_first = true },
+    --   css = { 'oxfmt', 'prettierd', 'prettier', stop_after_first = true },
+    --   javascript = { 'oxfmt', 'prettierd', 'prettier', stop_after_first = true },
+    --   jsx = { 'oxfmt', 'prettierd', 'prettier', stop_after_first = true },
+    --   typescript = { 'oxfmt', 'prettierd', 'prettier', stop_after_first = true },
+    --   tsx = { 'oxfmt', 'prettierd', 'prettier', stop_after_first = true },
+    --   json = { 'oxfmt', 'prettierd', 'prettier', stop_after_first = true },
+    --   yaml = { 'oxfmt', 'prettierd', 'prettier', stop_after_first = true },
+    -- },
     formatters_by_ft = {
       lua = { 'stylua' },
       astro = { 'prettierd', 'prettier', stop_after_first = true },
-      html = { 'oxfmt', 'prettierd', 'prettier', stop_after_first = true },
-      css = { 'oxfmt', 'prettierd', 'prettier', stop_after_first = true },
-      javascript = { 'oxfmt', 'prettierd', 'prettier', stop_after_first = true },
-      jsx = { 'oxfmt', 'prettierd', 'prettier', stop_after_first = true },
-      typescript = { 'oxfmt', 'prettierd', 'prettier', stop_after_first = true },
-      tsx = { 'oxfmt', 'prettierd', 'prettier', stop_after_first = true },
-      json = { 'oxfmt', 'prettierd', 'prettier', stop_after_first = true },
-      yaml = { 'oxfmt', 'prettierd', 'prettier', stop_after_first = true },
+      html = { 'prettierd', 'prettier', stop_after_first = true },
+      css = { 'prettierd', 'prettier', stop_after_first = true },
+      javascript = { 'prettierd', 'prettier', stop_after_first = true },
+      jsx = { 'prettierd', 'prettier', stop_after_first = true },
+      typescript = { 'prettierd', 'prettier', stop_after_first = true },
+      tsx = { 'prettierd', 'prettier', stop_after_first = true },
+      json = { 'prettierd', 'prettier', stop_after_first = true },
+      yaml = { 'prettierd', 'prettier', stop_after_first = true },
     },
   },
 }

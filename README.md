@@ -15,4 +15,4 @@
 - [ ] Add markdown rendering
     - [ ] https://github.com/OXY2DEV/markview.nvim
     - [ ] https://github.com/MeanderingProgrammer/render-markdown.nvim
-
+- [ ] Conform: Add oxfmt once it is stable enough (supporting important plugins)
